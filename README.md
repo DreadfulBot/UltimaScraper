@@ -19,6 +19,17 @@ echo 'export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl@3/lib/' >> ~/.
 source ~/.zshrc
 ```
 
+# Other errors
+
+In case of error
+
+```
+AttributeError: 'AuthModel' object has no attribute 'auth_details'. Did you mean: 'get_auth_details'?
+```
+
+Try to auth from another web-browser (for example - Firefox)
+
+In fact, this error means that your try to auth was failed, but error is not not handled properly
 
 # UltimaScraper (Python 3.10.1+)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
