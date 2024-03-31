@@ -1,36 +1,3 @@
-# Fix for MacOS M1:
-In case of error: 
-
-```
-ld: library not found for -lssl
-
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-
-error: command 'cc' failed with exit status 1
-```
-
-Do this: 
-
-```
-xcode-select --install
-brew install openssl
-echo 'export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"' >> ~/.zshrc
-echo 'export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl@3/lib/' >> ~/.zshrc
-source ~/.zshrc
-```
-
-# Other errors
-
-In case of error
-
-```
-AttributeError: 'AuthModel' object has no attribute 'auth_details'. Did you mean: 'get_auth_details'?
-```
-
-Try to auth from another web-browser (for example - Firefox)
-
-In fact, this error means that your try to auth was failed, but error is not not handled properly
-
 # UltimaScraper (Python 3.10.1+)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/0xHoarder.svg?style=social&label=Follow%200xHoarder)](https://twitter.com/0xHoarder)

@@ -1,1 +1,0 @@
-poetry run python3.11 start_us.py
